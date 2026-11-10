@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hair by Cynthia · Boise North End</title>
+<meta name="description" content="Book a hair appointment with Cynthia at The Larkin Collective, 1120 Larkin Ave, Boise. Fridays and every other Saturday.">
+<meta property="og:title" content="Hair by Cynthia · Boise">
+<meta property="og:description" content="Book a hair appointment with Cynthia in Boise's North End.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Hair by Cynthia",
+  "telephone": "+1-208-312-1820",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1120 Larkin Ave, Suite 4",
+    "addressLocality": "Boise",
+    "addressRegion": "ID",
+    "addressCountry": "US"
+  }
+}
+</script>
+</head>
+<body>
+
+<!--
+  ===========================================================
+  BOOKING LINK — paste Cynthia's Google Calendar booking link
+  between the quotes in data-booking-url below.
+  Leave it empty and the site shows "Text to book" instead.
+  ===========================================================
+-->
+<div id="site" data-booking-url="">
+
+<div class="blob blob-1" aria-hidden="true"></div>
+<div class="blob blob-2" aria-hidden="true"></div>
+<div class="blob blob-3" aria-hidden="true"></div>
+
+<header class="wrap header">
+  <div class="brand">Hair by Cynthia</div>
+  <a class="header-text" href="sms:2083121820">Text 208-312-1820</a>
+</header>
+
+<main class="wrap main">
+
+  <section class="info">
+    <div class="pill">Boise · North End</div>
+    <h1>Book with <span>Cynthia</span></h1>
+
+    <div class="facts">
+      <div>
+        <h2 class="label">Where</h2>
+        <p>Suite 4, The Larkin Collective<br>1120 Larkin Ave, Boise, ID</p>
+        <a class="strong-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=1120+Larkin+Ave,+Boise,+ID">Get directions →</a>
+      </div>
+      <div>
+        <h2 class="label">Hours</h2>
+        <p>Fridays <span class="nw">9 AM – 2 PM</span><br>Every other Saturday <span class="nw">9 AM – 6 PM</span></p>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe title="Map to Hair by Cynthia" src="https://www.google.com/maps?q=1120+Larkin+Ave,+Boise,+ID&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Shown once a booking link is set -->
+  <section class="card booking" id="booking-online" hidden aria-label="Book an appointment">
+    <iframe id="booking-frame" title="Book an appointment with Cynthia"></iframe>
+    <div class="booking-foot">
+      <span>2-hour sessions · Confirmation by email</span>
+      <a id="booking-full" href="#" target="_blank" rel="noopener">Open full screen →</a>
+    </div>
+  </section>
+
+  <!-- Shown while there is no booking link -->
+  <section class="card fallback" id="booking-text" aria-label="Book an appointment">
+    <div class="check" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4a7d33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12z"/></svg>
+    </div>
+    <h2>Book by text</h2>
+    <p>Send Cynthia a quick text with the day and time you'd like, and she'll get you on the calendar.</p>
+    <a class="btn" href="sms:2083121820">Text 208-312-1820</a>
+    <p class="small">2-hour sessions · Fridays and every other Saturday</p>
+  </section>
+
+</main>
+
+<footer class="wrap footer">© <span id="year">2026</span> Hair by Cynthia · Boise, Idaho</footer>
+
+</div>
+
+<script>
+  (function () {
+    var site = document.getElementById('site');
+    var url = (site.getAttribute('data-booking-url') || '').trim();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if (!url) return;
+    var embed = url;
+    // Google's full schedule links embed best with gv=true
+    if (/calendar\.google\.com\/calendar\/appointments\//.test(url) && !/[?&]gv=true/.test(url)) {
+      embed += (url.indexOf('?') === -1 ? '?' : '&') + 'gv=true';
+    }
+    document.getElementById('booking-frame').src = embed;
+    document.getElementById('booking-full').href = url;
+    document.getElementById('booking-online').hidden = false;
+    document.getElementById('booking-text').hidden = true;
+  })();
+</script>
+</body>
+</html>
