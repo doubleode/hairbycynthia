@@ -1,6 +1,6 @@
 # Hair by Cynthia
 
-Static website for Hair by Cynthia (Boise). Hosted free on Cloudflare (Worker, static assets): https://hairbycynthia.doubleode.workers.dev
+Static website for Hair by Cynthia (Boise). Hosted free on Cloudflare Pages: https://hairbycynthia.pages.dev
 
 ## Turning on online booking
 
@@ -14,4 +14,4 @@ While it's empty, the site shows a "Book by text" card instead.
 
 ## Cloudflare
 
-Pushing to `main` redeploys automatically. Only the `public/` folder is published (see `wrangler.jsonc`).
+Pushing to `main` redeploys automatically. Pages settings: framework None, no build command, build output directory `public`.
