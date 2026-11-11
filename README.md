@@ -1,6 +1,6 @@
 # Hair by Cynthia
 
-Static website for Hair by Cynthia (Boise). Hosted free on Cloudflare Pages: https://hairbycynthia.pages.dev
+Static website for Hair by Cynthia (Meridian, ID). Hosted free on Cloudflare Pages: https://hairbycynthia.pages.dev
 
 ## Turning on online booking
 
